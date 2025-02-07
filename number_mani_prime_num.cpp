@@ -14,21 +14,16 @@ int main(){
     if(check==0){
         int new_check;
         cout<<"Given Number is a prime number"<<endl;
-        cout<<"The next greater prime number is: "<<endl;
-        for(int i=num+1;;i++){
-            for(int j=1;j<=i/2;j++){
-                if(i%j==0){
-                    new_check++;
-                }else{
+        cout<<"The next greater prime number is: ";
+        for(int j=num+1;;j++){
+            for(int i=1;i<=j/2;i++){
+                if(j%i==0){
                     new_check=0;
+                }else{
+                    new_check=1;
                 }
             }
-            if(new_check==0){
-                cout<<i;
-                break;
-            }
         }
-
     }else{
         cout<<"Given Number is a not prime number"<<endl;
         cout<<"Given Number's factors are:"<<endl;
